@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+SRC_FILE = $(pwd)
+SRC_FILE = ``
