@@ -2,7 +2,7 @@
 
 DIR = $(pwd)
 SRC_FILE = ${1:-"DIR"}
-EXE_FILE = "o"
+EXE_FILE = "run"
 LOG_FILE = "run.log"
 
 if [[ "$1" == "--debug" ]]; then
@@ -12,6 +12,4 @@ if [[ "$1" == "--debug" ]]; then
 fi
 
 clang++ -std=c++17 "DIR" "EXE_FILE" 2>$! | tee "LOG_FILE"
-
-
-
+./run
