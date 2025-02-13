@@ -1,4 +1,17 @@
 #!/bin/zsh
 
-SRC_FILE = $(pwd)
-SRC_FILE = ``
+DIR = $(pwd)
+SRC_FILE = ${1:-"DIR"}
+EXE_FILE = "o"
+LOG_FILE = "run.log"
+
+if [[ "$1" == "--debug" ]]; then
+  echo "debug mode"
+  clang++ --debug "DIR" "EXE_FILE" 2>$! | tee "LOG_FILE"
+  exit 0
+fi
+
+clang++ -std=c++17 "DIR" "EXE_FILE" 2>$! | tee "LOG_FILE"
+
+
+
