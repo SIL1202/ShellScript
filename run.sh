@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Define colors
 RED='\033[0;31m'
