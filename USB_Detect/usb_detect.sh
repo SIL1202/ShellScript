@@ -24,7 +24,7 @@ log "Script started. Checking for USB device '$TARGET_USB'..."
 
 # If the CLOSED_FLAG exists, do not open the application
 if [[ -f "$CLOSED_FLAG" ]]; then
-  log "File had been closed."
+  log ".privateaccess_closed exists."
   exit 0
 fi
 
@@ -43,8 +43,8 @@ for i in {1..5}; do
     open "$APP_PATH"
 
     # Start watch_privateaccess.sh in the background
-    "$CURRENT_PATH/watch_privateaccess.sh" &
-    "$CURRENT_PATH/usb_remove.sh" &
+    zsh "$CURRENT_PATH/watch_privateaccess.sh" &
+    zsh "$CURRENT_PATH/usb_remove.sh" &
 
     exit 0
   fi
