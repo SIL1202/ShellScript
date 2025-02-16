@@ -44,6 +44,7 @@ for i in {1..5}; do
 
     # Start watch_privateaccess.sh in the background
     "$CURRENT_PATH/watch_privateaccess.sh" &
+    "$CURRENT_PATH/usb_remove.sh" &
 
     exit 0
   fi
