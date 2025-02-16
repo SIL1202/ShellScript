@@ -15,11 +15,13 @@ log "Monitoring USB removal for '$TARGET_USB'..."
 
 # Continuously check if the USB is still mounted
 while [[ -d "/Volumes/$TARGET_USB" ]]; do
+  log "usb_remove.sh running"
   sleep 2
 done
 
 # USB was removed, delete the closed flag
 rm -f "$CLOSED_FLAG"
+rm -f "$LOG_FILE"
 log "USB removed. Restart enabled."
 
 exit 0
