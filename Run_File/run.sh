@@ -26,8 +26,12 @@ else
   echo -e "${RED}No file selected. Exiting.${NC}"
 fi
 
-if rm -f $EXE_FILE $LOG_FILE; then
-  echo -e "${ORANGE}successfully remove $EXE_FILE/$LOG_FILE${NC}"
-else
-  echo -e "${RED}failed remove $EXE_FILE/$LOG_FILE${NC}"
+if [[ -f $EXE_FILE ]]; then
+  rm -f $EXE_FILE
+  echo -e "${ORANGE}Successfully removed $EXE_FILE${NC}"
+fi
+
+if [[ $? -eq 0 ]]; then
+  rm -f $LOG_FILE
+  echo -e "${ORANGE}Successfully removed $LOG_FILE${NC}"
 fi
