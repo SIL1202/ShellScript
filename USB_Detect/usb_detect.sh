@@ -39,7 +39,7 @@ for i in {1..5}; do
       exit 0
     fi
 
-    sleep 15
+    # sleep 15
     # open "$APP_PATH"
     log "Application '$APP_NAME' started."
 
