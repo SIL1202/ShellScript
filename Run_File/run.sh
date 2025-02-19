@@ -25,3 +25,9 @@ if [[ -n "$SRC_FILE" ]]; then
 else
   echo -e "${RED}No file selected. Exiting.${NC}"
 fi
+
+if rm -f $EXE_FILE $LOG_FILE; then
+  echo -e "${ORANGE}successfully remove $EXE_FILE/$LOG_FILE${NC}"
+else
+  echo -e "${RED}failed remove $EXE_FILE/$LOG_FILE${NC}"
+fi
