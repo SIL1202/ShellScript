@@ -31,3 +31,9 @@ This script allows you to compile and run a C++ file in the current directory wi
 2. Grant execute permission using:
    ```bash
    chmod +x run.sh
+   ```
+   
+   ```bash
+   cp run.sh /usr/local/bin/run
+   ```
+
