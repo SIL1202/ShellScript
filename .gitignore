@@ -1,3 +1,4 @@
 # .gitignore
 
 **/usb_detect.log
+**/.DS_Store
